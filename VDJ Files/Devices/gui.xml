@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device name="GM Generic USB-HID" author="Guilherme Mazoni" type="HID" decks="4" vid="0x0461" pid="0x0020" reportsize="64" outreportsize="64">
+
+<page type="in">
+<constant byte="63" value="0xFF" />
+
+	<slider bit="0x00" nbbits="12" name="C0D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x10" nbbits="12" name="C1D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x20" nbbits="12" name="C2D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x30" nbbits="12" name="C3D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x40" nbbits="12" name="C4D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x50" nbbits="12" name="C5D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x60" nbbits="12" name="C6D1" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x70" nbbits="12" name="C7D1" inverted="false" min="30" max="4060" vibration="2"/>
+
+	<slider bit="0x80" nbbits="12" name="C0D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x90" nbbits="12" name="C1D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0xA0" nbbits="12" name="C2D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0xB0" nbbits="12" name="C3D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0xC0" nbbits="12" name="C4D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0xD0" nbbits="12" name="C5D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0xE0" nbbits="12" name="C6D2" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0xF0" nbbits="12" name="C7D2" inverted="false" min="30" max="4060" vibration="2"/>
+
+	<slider bit="0x100" nbbits="12" name="C0D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x110" nbbits="12" name="C1D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x120" nbbits="12" name="C2D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x130" nbbits="12" name="C3D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x140" nbbits="12" name="C4D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x150" nbbits="12" name="C5D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x160" nbbits="12" name="C6D3" inverted="false" min="30" max="4060" vibration="2"/>
+	<slider bit="0x170" nbbits="12" name="C7D3" inverted="false" min="30" max="4060" vibration="2"/>
+
+	<slider bit="0x186" nbbits="10" name="AN0" inverted="false" min="5" max="1020" vibration="2"/>
+	
+	<jog byte="61" size="byte" full="255" min="0" max="255" name="JOGWHEEL"/>	
+</page>
+
+<page type="in">
+<constant byte="63" value="0x0A" />
+
+<slider bit="0x00" nbbits="12" name="C0D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x10" nbbits="12" name="C1D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x20" nbbits="12" name="C2D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x30" nbbits="12" name="C3D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x40" nbbits="12" name="C4D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x50" nbbits="12" name="C5D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x60" nbbits="12" name="C6D4" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x70" nbbits="12" name="C7D4" inverted="true" min="30" max="4060" vibration="2"/>
+
+<slider bit="0x80" nbbits="12" name="C0D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0x90" nbbits="12" name="C1D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0xA0" nbbits="12" name="C2D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0xB0" nbbits="12" name="C3D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0xC0" nbbits="12" name="C4D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0xD0" nbbits="12" name="C5D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0xE0" nbbits="12" name="C6D5" inverted="false" min="30" max="4060" vibration="2"/>
+<slider bit="0xF0" nbbits="12" name="C7D5" inverted="false" min="30" max="4060" vibration="2"/>
+
+<button bit="0x107" name="M1" inverted="false"/>
+<button bit="0x106" name="M3" inverted="false"/>
+<button bit="0x105" name="M5" inverted="false"/>
+<button bit="0x104" name="M2" inverted="false"/>
+<button bit="0x103" name="M6" inverted="false"/>
+<button bit="0x102" name="M4" inverted="false"/>
+<button bit="0x101" name="RD_CUE_1" inverted="false"/>
+<button bit="0x100" name="RD_CUE_2" inverted="false"/>
+
+<button bit="0x10F" name="RD_CUE_3" inverted="false"/>
+<button bit="0x10E" name="RD_CUE_4" inverted="false"/>
+<button bit="0x10D" name="RD_RESET" inverted="false"/>
+<button bit="0x10C" name="RD_BEAT_LOCK" inverted="false"/>
+<button bit="0x10B" name="RD_KEY_LOCK" inverted="false"/>
+<button bit="0x10A" name="RD_EFFECT_2" inverted="false"/>
+<button bit="0x109" name="RD_EFFECT_1" inverted="false"/>
+<button bit="0x108" name="RD_FILTER" inverted="false"/>
+
+<button bit="0x117" name="RD_LOOP_IN" inverted="false"/>
+<button bit="0x116" name="RD_LOOP_OUT" inverted="false"/>
+<button bit="0x115" name="RD_LOOP_HALF" inverted="false"/>
+<button bit="0x114" name="RD_LOOP_TOGGLE" inverted="false"/>
+<button bit="0x113" name="RD_LOOP_SMART" inverted="false"/>
+<button bit="0x112" name="RD_LOOP_DOUBLE" inverted="false"/>
+<button bit="0x111" name="RD_SAMPLER" inverted="false"/>
+<button bit="0x110" name="D4_TOP_PFL" inverted="false"/>
+
+<button bit="0x11F" name="D3_TOP_PFL" inverted="false"/>
+<button bit="0x11E" name="D3_PFL" inverted="false"/>
+<button bit="0x11D" name="D4_PFL" inverted="false"/>
+<button bit="0x11C" name="RD_SWITCH_DECK" inverted="false"/>
+<button bit="0x11B" name="RD_NUDGE_P" inverted="false"/>
+<button bit="0x11A" name="RD_NUDGE_M" inverted="false"/>
+<button bit="0x119" name="LD_NUDGE_P" inverted="false"/>
+<button bit="0x118" name="LD_NUDGE_M" inverted="false"/>
+
+<button bit="0x127" name="D4_LOW_KILL" inverted="false"/>
+<button bit="0x126" name="D3_LOW_KILL" inverted="false"/>
+<button bit="0x125" name="D2_LOW_KILL" inverted="false"/>
+<button bit="0x124" name="D1_LOW_KILL" inverted="false"/>
+<button bit="0x123" name="D2_MID_KILL" inverted="false"/>
+<button bit="0x122" name="D1_MID_KILL" inverted="false"/>
+<button bit="0x121" name="D3_MID_KILL" inverted="false"/>
+<button bit="0x120" name="D4_MID_KILL" inverted="false"/>
+
+<button bit="0x12F" name="D1_HIGH_KILL" inverted="false"/>
+<button bit="0x12E" name="D2_HIGH_KILL" inverted="false"/>
+<button bit="0x12D" name="D3_HIGH_KILL" inverted="false"/>
+<button bit="0x12C" name="D4_HIGH_KILL" inverted="false"/>
+<button bit="0x12B" name="D4_MUTE" inverted="false"/>
+<button bit="0x12A" name="D3_MUTE" inverted="false"/>
+<button bit="0x129" name="D2_MUTE" inverted="false"/>
+<button bit="0x128" name="D1_MUTE" inverted="false"/>
+
+<button bit="0x137" name="LD_CUE_4" inverted="false"/>
+<button bit="0x136" name="LD_CUE_3" inverted="false"/>
+<button bit="0x135" name="LD_CUE_2" inverted="false"/>
+<button bit="0x134" name="LD_CUE_1" inverted="false"/>
+<button bit="0x133" name="LD_LOOP_OUT" inverted="false"/>
+<button bit="0x132" name="LD_SAMPLER" inverted="false"/>
+<button bit="0x131" name="LD_LOOP_IN" inverted="false"/>
+<button bit="0x130" name="LD_LOOP_DOUBLE" inverted="false"/>
+
+<button bit="0x13F" name="LD_LOOP_TOGGLE" inverted="false"/>
+<button bit="0x13E" name="LD_LOOP_HALF" inverted="false"/>
+<button bit="0x13D" name="LD_LOOP_SMART" inverted="false"/>
+<button bit="0x13C" name="GEN_ACTION" inverted="false"/>
+
+<button bit="0x147" name="D1_TOP_PFL" inverted="false"/>
+<button bit="0x146" name="D1_PFL" inverted="false"/>
+<button bit="0x145" name="D2_PFL" inverted="false"/>
+<button bit="0x144" name="D2_TOP_PFL" inverted="false"/>
+<button bit="0x143" name="LD_KEY_LOCK" inverted="false"/>
+<button bit="0x142" name="LD_SWITCH_DECK" inverted="false"/>
+<button bit="0x141" name="LD_FILTER" inverted="false"/>
+<button bit="0x140" name="LD_BEAT_LOCK" inverted="false"/>
+
+<button bit="0x14F" name="LD_EFFECT_1" inverted="false"/>
+<button bit="0x14E" name="LD_RESET" inverted="false"/>
+<button bit="0x14D" name="LD_EFFECT_2" inverted="false"/>
+
+<button bit="0x16B" name="RD_SYNC" inverted="true"/>
+<button bit="0x16A" name="RD_CUE" inverted="true"/>
+<button bit="0x169" name="RD_STOP" inverted="true"/>
+<button bit="0x168" name="RD_PLAY" inverted="true"/>
+
+<button bit="0x17B" name="LD_SYNC" inverted="true"/>
+<button bit="0x17A" name="LD_CUE" inverted="true"/>
+<button bit="0x179" name="LD_STOP" inverted="true"/>
+<button bit="0x178" name="LD_PLAY" inverted="true"/>
+
+<button bit="0x15F" name="SELECT_3" inverted="false"/>
+<button bit="0x15E" name="CLONE_3" inverted="false"/>
+<button bit="0x15D" name="MASTER_4" inverted="false"/>
+<button bit="0x15C" name="SELECT_4" inverted="false"/>
+<button bit="0x15B" name="CLONE_4" inverted="false"/>
+
+<button bit="0x14C" name="JOG_MODE" inverted="false"/>
+<button bit="0x14B" name="JOG_DS_4" inverted="false"/>
+<button bit="0x14A" name="JOG_DS_3" inverted="false"/>
+<button bit="0x149" name="JOG_DS_2" inverted="false"/>
+<button bit="0x148" name="JOG_DS_1" inverted="false"/>
+
+<button bit="0x157" name="JOG_FUNCTION" inverted="false"/>
+
+<button bit="0x156" name="CLONE_1" inverted="false"/>
+
+<button bit="0x152" name="MASTER_2" inverted="false"/>
+<button bit="0x151" name="CLONE_2" inverted="false"/>
+<button bit="0x150" name="MASTER_3" inverted="false"/>
+<button bit="0x154" name="MASTER_1" inverted="false"/>
+<button bit="0x155" name="SELECT_1" inverted="false"/>
+<button bit="0x153" name="SELECT_2" inverted="false"/>
+
+	<jog byte="61" size="byte" full="255" min="0" max="255" name="JOGWHEEL"/>
+</page>
+
+<page type="out">
+<constant byte="2" text="!" />
+<text byte="3" encoding="ascii" nbchars="16" name="LCD_L_L1"/>
+<text byte="19" encoding="ascii" nbchars="16" name="LCD_L_L2"/>
+</page>
+
+<page type="out">
+<constant byte="2" text="@" />
+<text byte="3" encoding="ascii" nbchars="16" name="LCD_R_L1"/>
+<text byte="19" encoding="ascii" nbchars="16" name="LCD_R_L2"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="1" />
+<led bit="0x00" name="LED_D4_MUTE"/>
+<led bit="0x01" name="LED_D3_MUTE"/>
+<led bit="0x02" name="LED_D2_MUTE"/>
+<led bit="0x03" name="LED_D1_MUTE"/>
+<led bit="0x04" name="LED_D4_KILL_HIGH"/>
+<led bit="0x05" name="LED_D3_KILL_HIGH"/>
+<led bit="0x06" name="LED_D2_KILL_HIGH"/>
+<led bit="0x07" name="LED_D1_KILL_HIGH"/>
+<led bit="0x08" name="LED_LD_KEY_LOCK"/>
+<led bit="0x09" name="LED_LD_CUE_3"/>
+<led bit="0x0A" name="LED_LD_CUE_4"/>
+<led bit="0x0B" name="LED_LD_BEAT_LOCK"/>
+<led bit="0x0C" name="LED_LD_RESET"/>
+<led bit="0x0D" name="LED_LD_EFFECT_2"/>
+<led bit="0x0E" name="LED_LD_EFFECT_1"/>
+<led bit="0x0F" name="LED_LD_FILTER"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="2" />
+<led bit="0x00" name="LED_D4_KILL_MID"/>
+<led bit="0x01" name="LED_D3_KILL_MID"/>
+<led bit="0x02" name="LED_D2_KILL_MID"/>
+<led bit="0x03" name="LED_D1_KILL_MID"/>
+<led bit="0x04" name="LED_D4_KILL_LOW"/>
+<led bit="0x05" name="LED_D3_KILL_LOW"/>
+<led bit="0x06" name="LED_D2_KILL_LOW"/>
+<led bit="0x07" name="LED_D1_KILL_LOW"/>
+<led bit="0x08" name="LED_LD_CUE_2"/>
+<led bit="0x09" name="LED_LD_CUE_1"/>
+<led bit="0x0A" name="LED_LD_LOOP_OUT"/>
+<led bit="0x0B" name="LED_LD_LOOP_IN"/>
+<led bit="0x0C" name="LED_LD_LOOP_DOUBLE"/>
+<led bit="0x0D" name="LED_LD_LOOP_TOGGLE"/>
+<led bit="0x0E" name="LED_LD_LOOP_HALF"/>
+<led bit="0x0F" name="LED_LD_LOOP_SMART"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="3" />
+<led bit="0x00" name="LED_D4_TOP_PFL"/>
+<led bit="0x01" name="LED_D3_TOP_PFL"/>
+<led bit="0x02" name="LED_D2_TOP_PFL"/>
+<led bit="0x03" name="LED_D1_TOP_PFL"/>
+<led bit="0x04" name="LED_D4_PFL"/>
+<led bit="0x05" name="LED_D3_PFL"/>
+<led bit="0x06" name="LED_D2_PFL"/>
+<led bit="0x07" name="LED_D1_PFL"/>
+<led bit="0x08" name="LED_LD_SAMPLER"/>
+<led bit="0x09" name="LED_LD_SWITCH_DECK"/>
+<led bit="0x0A" name="LED_RD_SWITCH_DECK"/>
+<led bit="0x0B" name="LED_LD_SYNC"/>
+<led bit="0x0C" name="LED_LD_PLAY"/>
+<led bit="0x0D" name="LED_LD_CUE"/>
+<led bit="0x0E" name="LED_LD_STOP"/>
+<led bit="0x0F" name="LED_RD_CUE"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="4" />
+<led bit="0x00" name="LED_RD_LOOP_HALF"/>
+<led bit="0x01" name="LED_RD_SAMPLER"/>
+<led bit="0x02" name="LED_RD_LOOP_TOGGLE"/>
+<led bit="0x03" name="LED_RD_LOOP_SMART"/>
+<led bit="0x04" name="LED_RD_LOOP_DOUBLE"/>
+<led bit="0x05" name="LED_RD_SYNC"/>
+<led bit="0x06" name="LED_RD_PLAY"/>
+<led bit="0x07" name="LED_RD_STOP"/>
+
+<led bit="0x0E" name="LED_CO_AZUL"/>
+<led bit="0x0F" name="LED_CO_VERMELHO"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="5" />
+<led bit="0x00" name="LED_RD_CUE_4"/>
+<led bit="0x01" name="LED_RD_CUE_1"/>
+<led bit="0x02" name="LED_RD_LOOP_IN"/>
+<led bit="0x03" name="LED_RD_CUE_2"/>
+<led bit="0x04" name="LED_RD_LOOP_OUT"/>
+<led bit="0x05" name="LED_RD_CUE_3"/>
+<led bit="0x06" name="LED_RD_RESET"/>
+<led bit="0x07" name="LED_RD_EFFECT_2"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="6" />
+<led bit="0x00" name="LED_JOG_FUNCTION"/>
+<led bit="0x01" name="LED_RD_BEAT_LOCK"/>
+<led bit="0x02" name="LED_RD_EFFECT_1"/>
+<led bit="0x03" name="LED_JOG_MODE"/>
+<led bit="0x04" name="LED_RD_KEY_LOCK"/>
+<led bit="0x05" name="LED_RD_FILTER"/>
+<led bit="0x06" name="LED_M5"/>
+<led bit="0x07" name="LED_M3"/>
+<led bit="0x08" name="LED_M6"/>
+<led bit="0x09" name="LED_M4"/>
+<led bit="0x0A" name="LED_M2"/>
+<led bit="0x0B" name="LED_M1"/>
+<led bit="0x0C" name="LED_JOG_DS_1"/>
+<led bit="0x0D" name="LED_JOG_DS_2"/>
+<led bit="0x0E" name="LED_JOG_DS_3"/>
+<led bit="0x0F" name="LED_JOG_DS_4"/>
+</page>
+
+<page type="out">
+<constant byte="2" value="7" />
+<led bit="0x00" name="LED_CLONE_1"/>
+<led bit="0x01" name="LED_SELECT_1"/>
+<led bit="0x02" name="LED_MASTER_1"/>
+<led bit="0x03" name="LED_CLONE_4"/>
+<led bit="0x04" name="LED_MASTER_2"/>
+<led bit="0x05" name="LED_SELECT_2"/>
+<led bit="0x06" name="LED_CLONE_2"/>
+<led bit="0x07" name="LED_MASTER_3"/>
+<led bit="0x08" name="LED_SELECT_3"/>
+<led bit="0x09" name="LED_CLONE_3"/>
+<led bit="0x0A" name="LED_MASTER_4"/>
+<led bit="0x0B" name="LED_SELECT_4"/>
+</page>
+
+<page type="out">
+<constant byte="2" text="q" />
+<bar byte="0" type="bitfill" min="0" max="255" name="D1_L_VU" inverted="true"/>
+<bar byte="1" type="bitfill" min="0" max="255" name="D1_R_VU" inverted="true"/>
+</page>
+
+<page type="out">
+<constant byte="2" text="w" />
+<bar byte="0" type="bitfill" min="0" max="255" name="D2_L_VU" inverted="true"/>
+<bar byte="1" type="bitfill" min="0" max="255" name="D2_R_VU" inverted="true"/>
+</page>
+
+<page type="out">
+<constant byte="2" text="e" />
+<bar byte="0" type="bitfill" min="0" max="255" name="D3_L_VU" inverted="true"/>
+<bar byte="1" type="bitfill" min="0" max="255" name="D3_R_VU" inverted="true"/>
+</page>
+
+<page type="out">
+<constant byte="2" text="r" />
+<bar byte="0" type="bitfill" min="0" max="255" name="D4_L_VU" inverted="true"/>
+<bar byte="1" type="bitfill" min="0" max="255" name="D4_R_VU" inverted="true"/>
+</page>
+
+</device>

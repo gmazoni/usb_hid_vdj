@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper device="GM Generic USB-HID" author="Guilherme Mazoni" description="DJ Controller" version="740" date="24/11/2013">
+  <map value="LCD_L_L1" action="var &quot;$LL_View&quot; ? deck left get text &quot;%effectslot1 - `deck left effect 1 active`&quot; : deck left get text &apos;%Ppitch %left %key&apos; " />
+  <map value="LCD_L_L2" action="var &quot;$LL_View&quot; ? deck left get text &quot;%effectslot2 - `deck left effect 2 active`&quot; : deck left get text &apos;%Pbpmex %Plevel %Pkeyoffset %loop&apos;" />
+  <map value="LCD_R_L1" action="var &quot;$RL_View&quot; ? deck right get text &quot;%effectslot3 - `deck right effect 3 active`&quot; : deck right get text &apos;%Ppitch %left %key&apos;" />
+  <map value="LCD_R_L2" action="var &quot;$RL_View&quot; ? deck right get text &quot;%effectslot4 - `deck right effect 4 active`&quot; : deck right get text &apos;%Pbpmex %Plevel %Pkeyoffset %loop&apos;" />
+  <map value="D1_L_VU" action="deck 1 get level_left" />
+  <map value="D1_R_VU" action="deck 1 get level_right" />
+  <map value="D2_L_VU" action="deck 2 get level_left" />
+  <map value="D2_R_VU" action="deck 2 get level_right" />
+  <map value="D3_L_VU" action="deck 3 get level_left" />
+  <map value="D3_R_VU" action="deck 3 get level_right" />
+  <map value="D4_L_VU" action="deck 4 get level_left" />
+  <map value="D4_R_VU" action="deck 4 get level_right" />
+  <map value="RD_NUDGE_P" action="var &quot;$del&quot; ?  browser_scroll -1 : deck right pitch_bend -5% 500ms" />
+  <map value="RD_NUDGE_M" action="var &quot;$del&quot; ?  browser_scroll +1 : deck right pitch_bend +5% 500ms" />
+  <map value="LD_NUDGE_P" action="var &quot;$del&quot; ?  browser_folder : deck left pitch_bend -5% 500ms" />
+  <map value="LD_NUDGE_M" action="var &quot;$del&quot; ?  browser_window &quot;songs&quot; : deck left pitch_bend +5% 500ms" />
+  <map value="M1" action="pitchlock" />
+  <map value="M2" action="toggle &quot;$zoom&quot;" />
+  <map value="M3" action="toggle &quot;$LL_View&quot;" />
+  <map value="M4" action="deck left fader_start" />
+  <map value="M5" action="toggle &quot;$RL_View&quot;" />
+  <map value="M6" action="deck right fader_start" />
+  <map value="RD_CUE_1" action="var &quot;$del&quot; ? deck right delete_cue 1 : deck right hot_cue 1" />
+  <map value="RD_CUE_2" action="var &quot;$del&quot; ? deck right delete_cue 2 : deck right hot_cue 2" />
+  <map value="RD_CUE_3" action="var &quot;$del&quot; ? deck right delete_cue 3 : deck right hot_cue 3" />
+  <map value="RD_CUE_4" action="var &quot;$del&quot; ? deck right delete_cue 4 : deck right hot_cue 4" />
+  <map value="RD_RESET" action="holding ?  deck right  pitch 100% : deck right pitch_reset 1%" />
+  <map value="RD_BEAT_LOCK" action="deck right beatlock" />
+  <map value="RD_KEY_LOCK" action="deck right key_lock" />
+  <map value="RD_EFFECT_1" action="deck right effect 3 active toggle" />
+  <map value="RD_EFFECT_2" action="deck right effect 4 active toggle" />
+  <map value="RD_FILTER" action="deck 2 rightdeck ? deck 2 effect 6 active toggle : deck 4 effect 8 active toggle" />
+  <map value="RD_LOOP_IN" action="deck right loop_in" />
+  <map value="RD_LOOP_OUT" action="deck right loop_out" />
+  <map value="RD_LOOP_HALF" action="deck right loop_half" />
+  <map value="RD_LOOP_TOGGLE" action="deck right loop ? on &amp; deck right loop : nothing &amp; deck right loop" />
+  <map value="RD_LOOP_SMART" action="var &quot;$del&quot; ? deck right loop_roll : deck right smart_loop" />
+  <map value="RD_LOOP_DOUBLE" action="deck right loop_double" />
+  <map value="RD_SAMPLER" action="deck right sampler play_stop" />
+  <map value="D4_TOP_PFL" action="deck 4 select" />
+  <map value="D3_TOP_PFL" action="deck 3 select" />
+  <map value="D3_PFL" action="deck 3 pfl" />
+  <map value="D4_PFL" action="deck 4 pfl" />
+  <map value="RD_SWITCH_DECK" action="deck 2 rightdeck ? deck 4 rightdeck &amp; deck 4 select &amp; deck 4 rightvideo : deck 2 rightdeck &amp; deck 2 select &amp; deck 2 rightvideo" />
+  <map value="D4_LOW_KILL" action="deck 4 eq_kill_low &amp; toggle &quot;$D4KL&quot;" />
+  <map value="D3_LOW_KILL" action="deck 3 eq_kill_low &amp; toggle &quot;$D3KL&quot;" />
+  <map value="D2_LOW_KILL" action="deck 2 eq_kill_low &amp; toggle &quot;$D2KL&quot;" />
+  <map value="D1_LOW_KILL" action="deck 1 eq_kill_low &amp; toggle &quot;$D1KL&quot;" />
+  <map value="D2_MID_KILL" action="deck 2 eq_kill_mid &amp; toggle &quot;$D2KM&quot;" />
+  <map value="D1_MID_KILL" action="deck 1 eq_kill_mid &amp; toggle &quot;$D1KM&quot;" />
+  <map value="D3_MID_KILL" action="deck 3 eq_kill_mid &amp; toggle &quot;$D3KM&quot;" />
+  <map value="D4_MID_KILL" action="deck 4 eq_kill_mid &amp; toggle &quot;$D4KM&quot;" />
+  <map value="D1_HIGH_KILL" action="deck 1 eq_kill_high &amp; toggle &quot;$D1KH&quot;" />
+  <map value="D2_HIGH_KILL" action="deck 2 eq_kill_high &amp; toggle &quot;$D2KH&quot;" />
+  <map value="D3_HIGH_KILL" action="deck 3 eq_kill_high &amp; toggle &quot;$D3KH&quot;" />
+  <map value="D4_HIGH_KILL" action="deck 4 eq_kill_high &amp; toggle &quot;$D4KH&quot;" />
+  <map value="D1_MUTE" action="deck 1 level 0% ? deck 1 level 100% : deck 1 level 0%" />
+  <map value="D2_MUTE" action="deck 2 level 0% ? deck 2 level 100% : deck 2 level 0%" />
+  <map value="D3_MUTE" action="deck 3 level 0% ? deck 3 level 100% : deck 3 level 0%" />
+  <map value="D4_MUTE" action="deck 4 level 0% ? deck 4 level 100% : deck 4 level 0%" />
+  <map value="LD_CUE_4" action="var &quot;$del&quot; ? deck left delete_cue 4 : deck left hot_cue 4" />
+  <map value="LD_CUE_3" action="var &quot;$del&quot; ? deck left delete_cue 3 : deck left hot_cue 3" />
+  <map value="LD_CUE_2" action="var &quot;$del&quot; ? deck left delete_cue 2 : deck left hot_cue 2" />
+  <map value="LD_CUE_1" action="var &quot;$del&quot; ? deck left delete_cue 1 : deck left hot_cue 1" />
+  <map value="LD_LOOP_OUT" action="deck left loop_out" />
+  <map value="LD_SAMPLER" action="deck left sampler play_stop" />
+  <map value="LD_LOOP_IN" action="deck left loop_in" />
+  <map value="LD_LOOP_DOUBLE" action="deck left loop_double" />
+  <map value="LD_LOOP_TOGGLE" action="deck left loop ? on &amp; deck left loop : nothing &amp; deck left loop" />
+  <map value="LD_LOOP_HALF" action="deck left loop_half" />
+  <map value="LD_LOOP_SMART" action="var &quot;$del&quot; ? deck left loop_roll : deck left  smart_loop" />
+  <map value="GEN_ACTION" action="var &quot;$del&quot; ? set &quot;$del&quot; 0 : set &quot;$del&quot; 1" />
+  <map value="D1_TOP_PFL" action="deck 1 select" />
+  <map value="D1_PFL" action="deck 1 pfl" />
+  <map value="D2_PFL" action="deck 2 pfl" />
+  <map value="D2_TOP_PFL" action="deck 2 select" />
+  <map value="LD_KEY_LOCK" action="deck left key_lock" />
+  <map value="LD_SWITCH_DECK" action="deck 1 leftdeck ? deck 3 leftdeck &amp; deck 3 select &amp; deck 3 leftvideo : deck 1 leftdeck &amp; deck 1 select &amp; deck 1 leftvideo" />
+  <map value="LD_FILTER" action="deck 1 leftdeck ? deck 1 effect 5 active toggle : deck 3 effect 7 active toggle" />
+  <map value="LD_BEAT_LOCK" action="deck left beatlock" />
+  <map value="LD_EFFECT_1" action="deck left effect 1 active toggle" />
+  <map value="LD_RESET" action="holding ?  deck left  pitch 100% : deck left pitch_reset 1%" />
+  <map value="LD_EFFECT_2" action="deck left effect 2 active toggle" />
+  <map value="RD_SYNC" action="var &quot;$del&quot; ? deck right smart_play : deck right sync" />
+  <map value="RD_CUE" action="var &quot;$del&quot; ? deck right smart_cue : deck right cue_button" />
+  <map value="RD_STOP" action="deck right stop_button" />
+  <map value="RD_PLAY" action="var &quot;$del&quot; ? deck right reverse : deck right play_button &amp; deck right reverse ? deck right reverse : nothing" />
+  <map value="LD_SYNC" action="var &quot;$del&quot; ? deck left smart_play : deck left sync" />
+  <map value="LD_CUE" action="var &quot;$del&quot; ? deck left smart_cue : deck left cue_button" />
+  <map value="LD_STOP" action="deck left stop_button" />
+  <map value="LD_PLAY" action="var &quot;$del&quot; ? deck left reverse : deck left play_button &amp; deck left reverse ? deck left reverse : nothing" />
+  <map value="JOG_MODE" action="deck 1 vinyl_mode &amp; deck 2 vinyl_mode &amp; deck 3 vinyl_mode &amp; deck 4 vinyl_mode" />
+  <map value="JOG_DS_4" action="set &quot;$JD&quot; 4" />
+  <map value="JOG_DS_3" action="set &quot;$JD&quot; 3" />
+  <map value="JOG_DS_2" action="set &quot;$JD&quot; 2" />
+  <map value="JOG_DS_1" action="set &quot;$JD&quot; 1" />
+  <map value="JOG_FUNCTION" action="var_equal &quot;$JD&quot; 1 ? var &quot;$del&quot; ? deck 1 slip_mode : deck 1 wheel_mode +1 : var_equal &quot;$JD&quot; 2 ? var &quot;$del&quot; ? deck 2 slip_mode : deck 2 wheel_mode +1 : var_equal &quot;$JD&quot; 3 ? var &quot;$del&quot; ? deck 3 slip_mode : deck 3 wheel_mode +1 : var_equal &quot;$JD&quot; 4 ? var &quot;$del&quot; ? deck 4 slip_mode : deck 4 wheel_mode +1 : nothing" />
+  <map value="CLONE_1" action="var &quot;$RL_View&quot; ? deck right effect 3 select -1 : deck right goto_bar 1" />
+  <map value="SELECT_1" action="var &quot;$LL_View&quot; ? deck left effect 1 select -1 : deck left goto_bar 1" />
+  <map value="MASTER_1" action="holding ? var &quot;$del&quot; ?  deck 1 unload : deck 1 load" />
+  <map value="SELECT_2" action="var &quot;$LL_View&quot; ? deck left effect 1 select +1 : deck left goto_bar 2" />
+  <map value="MASTER_2" action="holding ? var &quot;$del&quot; ? deck 2 unload : deck 2 load" />
+  <map value="CLONE_2" action="var &quot;$RL_View&quot; ? deck right effect 3 select +1 : deck right goto_bar 2" />
+  <map value="MASTER_3" action="holding ? var &quot;$del&quot; ? deck 3 unload : deck 3 load" />
+  <map value="SELECT_3" action="var &quot;$LL_View&quot; ? deck left effect 2 select -1 : deck left goto_bar 3" />
+  <map value="CLONE_3" action="var &quot;$RL_View&quot; ? deck right effect 4 select -1 : deck right goto_bar 3" />
+  <map value="MASTER_4" action="holding ? var &quot;$del&quot; ? deck 4 unload : deck 4 load" />
+  <map value="SELECT_4" action="var &quot;$LL_View&quot; ? deck left effect 2 select +1 : deck left goto_bar 4" />
+  <map value="CLONE_4" action="var &quot;$RL_View&quot; ? deck right effect 4 select +1 : deck right goto_bar 4" />
+  <map value="JOGWHEEL" action="var &quot;$zoom&quot; ? zoom : var_equal &quot;$JD&quot; 1 ? deck 1 jogwheel : var_equal &quot;$JD&quot; 2 ? deck 2 jogwheel : var_equal &quot;$JD&quot; 3 ? deck 3 jogwheel : var_equal &quot;$JD&quot; 4 ? deck 4 jogwheel : nothing" />
+  <map value="C0D1" action="deck 1 leftdeck ? deck 1 effect 5 slider 1 &amp; deck 1 effect 5 slider 2 100% : deck 3 effect 7 slider 1 &amp; deck 3 effect 7 slider 2 100%" />
+  <map value="C1D1" action="deck left effect 1 slider 1" />
+  <map value="C2D1" action="deck left effect 1 slider 2" />
+  <map value="C3D1" action="deck left effect 2 slider 1" />
+  <map value="C4D1" action="deck left effect 2 slider 2" />
+  <map value="C5D1" action="deck left sampler volume" />
+  <map value="C6D1" action="deck 1 gain_slider" />
+  <map value="C7D1" action="deck 2  gain_slider" />
+  <map value="C0D2" action="deck 3 gain_slider" />
+  <map value="C1D2" action="deck 4 gain_slider" />
+  <map value="C2D2" action="deck 4 eq_high" />
+  <map value="C3D2" action="deck 3 eq_mid" />
+  <map value="C4D2" action="deck 4 eq_mid" />
+  <map value="C5D2" action="deck 3 eq_high" />
+  <map value="C6D2" action="deck 2 eq_high" />
+  <map value="C7D2" action="deck 1 eq_high" />
+  <map value="C0D3" action="deck left pitch_slider" />
+  <map value="C1D3" action="deck right sampler volume" />
+  <map value="C2D3" action="deck 4 eq_low" />
+  <map value="C3D3" action="deck 3 eq_low" />
+  <map value="C4D3" action="deck 2 eq_low" />
+  <map value="C5D3" action="deck 1 eq_low" />
+  <map value="C6D3" action="deck 1 eq_mid" />
+  <map value="C7D3" action="deck 2 eq_mid" />
+  <map value="C0D4" action="master_volume" />
+  <map value="C1D4" action="deck right effect 4 slider 2" />
+  <map value="C2D4" action="deck right effect 3 slider 2" />
+  <map value="C3D4" action="deck right effect 3 slider 1" />
+  <map value="C4D4" action="deck right key" />
+  <map value="C5D4" action="deck 2 rightdeck ? deck 2 effect 6 slider 1 &amp; deck 2 effect 6 slider 2 100% : deck 4 effect 8 slider 1 &amp; deck 4 effect 8 slider 2 100%" />
+  <map value="C6D4" action="deck right effect 4 slider 1" />
+  <map value="C7D4" action="deck right pitch_slider" />
+  <map value="C0D5" action="crossfader_slider &amp; param_greater 48% ? set &quot;$red&quot; 1 &amp;  param_smaller 52% ? set &quot;$blue&quot; 1 : set &quot;$blue&quot; 0   : set &quot;$red&quot; 0 " />
+  <map value="C1D5" action="deck 4 volume_slider" />
+  <map value="C2D5" action="deck 3 volume_slider" />
+  <map value="C3D5" action="deck 2 volume_slider" />
+  <map value="C4D5" action="deck 1 volume_slider" />
+  <map value="C5D5" action="mic_volume" />
+  <map value="C6D5" action="headphone_mix" />
+  <map value="C7D5" action="headphone_volume" />
+  <map value="AN0" action="deck left key" />
+  <map value="LED_D4_MUTE" action="deck 4 level 0%" />
+  <map value="LED_D3_MUTE" action="deck 3 level 0%" />
+  <map value="LED_D2_MUTE" action="deck 2 level 0%" />
+  <map value="LED_D1_MUTE" action="deck 1 level 0%" />
+  <map value="LED_D4_KILL_HIGH" action="var &quot;$D4KH&quot;" />
+  <map value="LED_D3_KILL_HIGH" action="var &quot;$D3KH&quot;" />
+  <map value="LED_D2_KILL_HIGH" action="var &quot;$D2KH&quot;" />
+  <map value="LED_D1_KILL_HIGH" action="var &quot;$D1KH&quot;" />
+  <map value="LED_LD_KEY_LOCK" action="deck left key_lock" />
+  <map value="LED_LD_CUE_3" action="deck left hot_cue 3  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_LD_CUE_4" action="deck left hot_cue 4  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_LD_BEAT_LOCK" action="deck left beatlock" />
+  <map value="LED_LD_RESET" action="var &quot;$del&quot; ? blink 500ms : deck left pitch_reset" />
+  <map value="LED_LD_EFFECT_2" action="deck left effect 2 active" />
+  <map value="LED_LD_EFFECT_1" action="deck left effect 1 active" />
+  <map value="LED_LD_FILTER" action="deck 1 leftdeck ? deck 1 effect 5 active : deck 3 effect 7 active" />
+  <map value="LED_D4_KILL_MID" action="var &quot;$D4KM&quot;" />
+  <map value="LED_D3_KILL_MID" action="var &quot;$D3KM&quot;" />
+  <map value="LED_D2_KILL_MID" action="var &quot;$D2KM&quot;" />
+  <map value="LED_D1_KILL_MID" action="var &quot;$D1KM&quot;" />
+  <map value="LED_D4_KILL_LOW" action="var &quot;$D4KL&quot;" />
+  <map value="LED_D3_KILL_LOW" action="var &quot;$D3KL&quot;" />
+  <map value="LED_D2_KILL_LOW" action="var &quot;$D2KL&quot;" />
+  <map value="LED_D1_KILL_LOW" action="var &quot;$D1KL&quot;" />
+  <map value="LED_LD_CUE_2" action="deck left hot_cue 2  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_LD_CUE_1" action="deck left hot_cue 1  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_LD_LOOP_OUT" action="deck left loop_out" />
+  <map value="LED_LD_LOOP_IN" action="deck left loop_in" />
+  <map value="LED_LD_LOOP_DOUBLE" action="on" />
+  <map value="LED_LD_LOOP_TOGGLE" action="deck left loop ? blink 300ms" />
+  <map value="LED_LD_LOOP_HALF" action="on" />
+  <map value="LED_LD_LOOP_SMART" action="deck left smart_loop" />
+  <map value="LED_D4_TOP_PFL" action="deck 4 select ? blink 300ms" />
+  <map value="LED_D3_TOP_PFL" action="deck 3 select ? blink 300ms" />
+  <map value="LED_D2_TOP_PFL" action="deck 2 select ? blink 300ms" />
+  <map value="LED_D1_TOP_PFL" action="deck 1 select ? blink 300ms" />
+  <map value="LED_D4_PFL" action="deck 4 pfl" />
+  <map value="LED_D3_PFL" action="deck 3 pfl" />
+  <map value="LED_D2_PFL" action="deck 2 pfl" />
+  <map value="LED_D1_PFL" action="deck 1 pfl" />
+  <map value="LED_LD_SAMPLER" action="deck left sampler play" />
+  <map value="LED_LD_SWITCH_DECK" action="deck 3 leftdeck" />
+  <map value="LED_RD_SWITCH_DECK" action="deck 4 rightdeck" />
+  <map value="LED_LD_SYNC" action="var &quot;$del&quot; ? deck left smart_play : deck left sync" />
+  <map value="LED_LD_PLAY" action="deck left play_button" />
+  <map value="LED_LD_CUE" action="deck left cue_button" />
+  <map value="LED_LD_STOP" action="deck left play ? blink" />
+  <map value="LED_RD_CUE" action="deck right cue_button" />
+  <map value="LED_RD_LOOP_HALF" action="on" />
+  <map value="LED_RD_SAMPLER" action="deck right sampler play" />
+  <map value="LED_RD_LOOP_TOGGLE" action="deck right loop ? blink 300ms" />
+  <map value="LED_RD_LOOP_SMART" action="deck right smart_loop" />
+  <map value="LED_RD_LOOP_DOUBLE" action="on" />
+  <map value="LED_RD_SYNC" action="var &quot;$del&quot; ? deck right smart_play : deck right sync" />
+  <map value="LED_RD_PLAY" action="deck right play_button" />
+  <map value="LED_RD_STOP" action="deck right play ? blink" />
+  <map value="LED_RD_CUE_4" action="deck right hot_cue 4  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_RD_CUE_1" action="deck right hot_cue 1 ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_RD_LOOP_IN" action="deck right loop_in" />
+  <map value="LED_RD_CUE_2" action="deck right hot_cue 2  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_RD_LOOP_OUT" action="deck right loop_out" />
+  <map value="LED_RD_CUE_3" action="deck right hot_cue 3  ? var &quot;$del&quot; ? blink 500ms : on" />
+  <map value="LED_RD_RESET" action="var &quot;$del&quot; ? blink 500ms : deck right pitch_reset" />
+  <map value="LED_RD_EFFECT_2" action="deck right effect 4 active" />
+  <map value="LED_JOG_FUNCTION" action="on" />
+  <map value="LED_RD_BEAT_LOCK" action="deck right beatlock" />
+  <map value="LED_RD_EFFECT_1" action="deck right effect 3 active" />
+  <map value="LED_JOG_MODE" action="vinyl_mode" />
+  <map value="LED_RD_KEY_LOCK" action="deck right key_lock" />
+  <map value="LED_RD_FILTER" action="deck 2 rightdeck ? deck 2 effect 6 active : deck 4 effect 8 active " />
+  <map value="LED_M5" action="var &quot;$RL_View&quot; ? blink 500ms : on" />
+  <map value="LED_M3" action="var &quot;$LL_View&quot; ? blink 500ms : on" />
+  <map value="LED_M6" action="deck right fader_start" />
+  <map value="LED_M4" action="deck left fader_start" />
+  <map value="LED_M2" action="var &quot;$zoom&quot; ? blink 300ms : off" />
+  <map value="LED_M1" action="pitchlock" />
+  <map value="LED_JOG_DS_1" action="var_equal &quot;$JD&quot; 1 ? deck 1 slip_mode ? blink 300ms : on : off" />
+  <map value="LED_JOG_DS_2" action="var_equal &quot;$JD&quot; 2 ? deck 2 slip_mode ? blink 300ms : on : off" />
+  <map value="LED_JOG_DS_3" action="var_equal &quot;$JD&quot; 3 ? deck 3 slip_mode ? blink 300ms : on : off" />
+  <map value="LED_JOG_DS_4" action="var_equal &quot;$JD&quot; 4 ? deck 4 slip_mode ? blink 300ms : on : off" />
+  <map value="LED_CLONE_1" action="var &quot;$RL_View&quot; ? blink 500ms : deck right goto_bar 1" />
+  <map value="LED_SELECT_1" action="var &quot;$LL_View&quot; ? blink 500ms : deck left goto_bar 1" />
+  <map value="LED_MASTER_1" action="deck 1 play ? on : blink 800ms" />
+  <map value="LED_CLONE_4" action="var &quot;$RL_View&quot; ? blink 500ms : deck right goto_bar 4" />
+  <map value="LED_MASTER_2" action="deck 2 play ? on : blink 800ms" />
+  <map value="LED_SELECT_2" action="var &quot;$LL_View&quot; ? blink 500ms : deck left goto_bar 2" />
+  <map value="LED_CLONE_2" action="var &quot;$RL_View&quot; ? blink 500ms : deck right goto_bar 2" />
+  <map value="LED_MASTER_3" action="deck 3 play ? on : blink 800ms" />
+  <map value="LED_SELECT_3" action="var &quot;$LL_View&quot; ? blink 500ms : deck left goto_bar 3" />
+  <map value="LED_CLONE_3" action="var &quot;$RL_View&quot; ? blink 500ms : deck right goto_bar 3" />
+  <map value="LED_MASTER_4" action="deck 4 play ? on : blink 800ms" />
+  <map value="LED_SELECT_4" action="var &quot;$LL_View&quot; ? blink 500ms : deck left goto_bar 4" />
+  <map value="LED_CO_AZUL" action="var &quot;$blue&quot;" />
+  <map value="LED_CO_VERMELHO" action="var &quot;$red&quot;" />
+  <map value="ONINIT" action="set &quot;$JD&quot; 1 &amp; deck 4 wheel_mode &quot;browser&quot; &amp; deck 1 effect 5 select &quot;Filters - 1&quot; &amp; deck 2 effect 6 select &quot;Filters - 2&quot; &amp; deck 3 effect 7 select &quot;Filters - 3&quot; &amp; deck 4 effect 8 select &quot;Filters - 4&quot; &amp; deck 1 effect 5 slider 2 100% &amp; deck 2 effect 6 slider 2 100% &amp; deck 3 effect 7 slider 2 100% &amp; deck 4 effect 8 slider 2 100%" />
+</mapper>
